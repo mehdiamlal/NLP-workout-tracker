@@ -9,3 +9,4 @@ A workout tracker built in python. 🏋🏻‍♀️
 > ![Screenshot 2022-09-08 at 16 53 55](https://user-images.githubusercontent.com/76702446/189154912-9f61e514-a6fd-4b74-b717-4a038df752dc.png)
 
 4. Create a Sheety account and setup a project, linking your Google Sheets document.
+5. Create a Basic or Bearer authentication key on the Sheety dashboard and assign its value to a new environment variable called **SHEETY_AUTH**.

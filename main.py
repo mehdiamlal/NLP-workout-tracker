@@ -11,6 +11,9 @@ NTX_HEADERS = {
 }
 
 SHEETY_ENDPOINT = "https://api.sheety.co/58e062f93ad029aa35ddb4a64278ea1e/workoutTracker/workouts"
+SHEETY_AUTH_HEADER = {
+    "Authorization": os.environ.get("SHEETY_AUTH")
+}
 
 
 natural_language_sentence = input("What exercise have you done today?\n> ")
@@ -36,5 +39,5 @@ for exercise in workout["exercises"]:
             "caloriesBurned": burned_calories
         }
     }
-    response = requests.post(url=SHEETY_ENDPOINT, json=data)
+    response = requests.post(url=SHEETY_ENDPOINT, headers=SHEETY_AUTH_HEADER, json=data)
     print(response.text)
